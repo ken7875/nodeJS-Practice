@@ -13,9 +13,10 @@ app.get('/', (req, res) => {
 })
 // search
 app.get('/search', (req, res) => {
-    const results = restaurantList.results.filter(item => item.name.toLowerCase().includes(req.query.keyword.toLowerCase()))
     const keywords = req.query.keyword
-    res.render('index', { restaurantList: results, keywords })
+    const regex = new RegExp(keywords, 'gi')
+    const results = restaurantList.results.filter(item => item.name.toLowerCase().includes(keywords.toLowerCase()))
+    res.render('index', { restaurantList: results, keywords})
 })
 //詳細介紹
 app.get('/restaurants/:id', (req, res) => {
