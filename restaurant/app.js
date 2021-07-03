@@ -14,9 +14,10 @@ app.get('/', (req, res) => {
 // search
 app.get('/search', (req, res) => {
     const keywords = req.query.keyword
-    const regex = new RegExp(keywords, 'gi')
     const results = restaurantList.results.filter(item => item.name.toLowerCase().includes(keywords.toLowerCase()))
-    res.render('index', { restaurantList: results, keywords})
+    let noResult
+    results == false ? noResult = '沒有搜尋結果' : noResult = ''
+    res.render('index', { restaurantList: results, keywords, noResult})
 })
 //詳細介紹
 app.get('/restaurants/:id', (req, res) => {
