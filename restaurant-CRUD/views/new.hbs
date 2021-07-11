@@ -1,0 +1,47 @@
+<h2 class="text-center mt-5">新增餐廳</h2>
+<div class="col-12">
+  <form action="/restaurants/new" method="POST" class="col-10 mx-auto my-5">
+    <div class="form-group mt-5">
+      <label for="name">餐廳名稱</label>
+      <input type="text" class="form-control" id="name" placeholder="餐廳名稱" name="name">
+    </div>
+    <div class="form-group mt-5">
+      <label for="name_en">餐廳英文名稱(選填)</label>
+      <input type="text" class="form-control" id="name_en" placeholder="餐廳名稱" name="name_en">
+    </div>
+    <div class="form-group mt-5">
+      <label for="category">餐廳種類</label>
+      <select class="form-control" id="category" name="category">
+        <option value="日本料理">日本料理</option>
+        <option value="中東料理">中東料理</option>
+        <option value="義式餐廳">義式餐廳</option>
+        <option value="咖啡">咖啡</option>
+      </select>
+    </div>
+    <div class="form-group mt-5">
+      <label for="location">地址</label>
+      <input type="text" class="form-control" id="location" placeholder="餐廳名稱" name="location">
+    </div>
+    <div class="form-group mt-5">
+      <label for="phone">電話</label>
+      <input type="text" class="form-control" id="phone" placeholder="餐廳名稱" name="phone">
+    </div>
+    <div class="form-group mt-5">
+      <label for="image">照片</label>
+      <input type="text" class="form-control" id="image" placeholder="餐廳名稱" name="image">
+    </div>
+    <div class="form-group mt-5">
+      <label for="google_map">google map 連結</label>
+      <input type="text" class="form-control" id="google_map" placeholder="餐廳名稱" name="google_map">
+    </div>
+    <div class="form-group mt-5">
+      <label for="rating">評分</label>
+      <input type="text" class="form-control" id="rating" placeholder="餐廳名稱" name="rating">
+    </div>
+    <div class="form-group mt-5">
+      <label for="description">餐廳描述</label>
+      <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">送出</button>
+  </form>
+</div>
