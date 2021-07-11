@@ -5,6 +5,10 @@ mongoose.connect("mongodb://localhost/restaurant", { useNewUrlParser: true , use
 const app = express()
 const port = 3000
 const db = mongoose.connection
+
+app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
+app.set('view engine', 'hbs')
+
 // mongodb連線
 db.once('open', () => {
     console.log('mongodb connect')
@@ -14,7 +18,7 @@ db.on('error', () => {
 })
 
 app.get('/', (req, res) => {
-    res.send('hello wrold')
+    return res.render('index')
 })
 app.listen(port, () => {
     console.log('App is running on http://localhost:3000')
