@@ -122,7 +122,9 @@ app.get('/search', (req, res) => {
         const result = restaurants.filter(item => 
             item.name.toLowerCase().includes(keywords) || item.category.toLowerCase().includes(keywords)
         )
-        result.length === 0 ? noResult = '無搜尋結果' : res.render('index', { restaurants: result, noResult, keywords })
+        console.log(result.length)
+        result.length === 0 ? noResult = '無搜尋結果' : noResult = ''
+        res.render('index', { restaurants: result, noResult, keywords })
     })
     .catch(err => console.log(err))
 })
