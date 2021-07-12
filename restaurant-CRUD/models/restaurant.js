@@ -16,7 +16,7 @@ const restaurantSchema = new schema({
         type: String,
         require: true
     },
-    catrgory: {
+    category: {
         type: String,
         require: true
     },

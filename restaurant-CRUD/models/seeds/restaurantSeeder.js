@@ -8,11 +8,10 @@ db.once('open', () => {
     console.log('mongodb connect')
     restaurantRes.results.forEach(restaurant => {
         Restaurant.create({
-            id: restaurant.id,
             name: restaurant.name,
             name_en: restaurant.name_en,
             image: restaurant.image,
-            catrgory: restaurant.category,
+            category: restaurant.category,
             location: restaurant.location,
             phone: restaurant.phone,
             google_map: restaurant.google_map,
