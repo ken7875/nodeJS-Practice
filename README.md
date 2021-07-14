@@ -4,6 +4,9 @@
 1. 餐廳搜尋功能
 2. 各餐廳詳細資料 <br>
 
+#作業
+1.restaurant (week1)
+2. restaurant-CRUD (week2)
 開啟專案方式
 ===
 1. 打開 terminal 將專案 clone 到本地 <br>
